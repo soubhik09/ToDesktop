@@ -5,8 +5,9 @@
 @tailwind utilities;
 
 @layer base{
-    body{
-      @apply font-body;  
+    html,body{
+      @apply font-body;
+      overflow-x: hidden;
     }
     h1, h2, h3{
         @apply font-display text-gray-800 font-medium;
