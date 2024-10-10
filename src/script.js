@@ -33,8 +33,6 @@ function setupIntersectionObserver(element, isLTR, speed){
             totalTranslate = -(translateX + initialTranslateRTL);
         }
 
-
-
         element.style.transform = `translateX(${totalTranslate}px)`;
     }
 
