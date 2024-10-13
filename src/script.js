@@ -48,3 +48,18 @@ setupIntersectionObserver(line1, true, 0.15);
 setupIntersectionObserver(line2, false, 0.15);
 setupIntersectionObserver(line3, true, 0.15);
 setupIntersectionObserver(line4, true, 0.8);
+
+
+
+const dtElements = document.querySelectorAll("dt");
+
+dtElements.forEach(e => {
+    e.addEventListener('click', () => {
+        const ddId = e.getAttribute('aria-controls');
+        const ddElement = document.getElementById(ddId);
+        const ddArrowIcon = e.querySelectorAll('i')[0];
+
+        ddElement.classList.toggle('hidden')
+        ddArrowIcon.classList.toggle('-rotate-180')
+    })
+})
